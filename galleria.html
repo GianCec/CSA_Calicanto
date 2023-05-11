@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSA il Calicanto</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html">
+				<img src="assets/logo.png" alt="Logo">
+			</a>
+				</div>
+		<button class="menu-toggle" aria-label="Menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</header>
+	<nav>
+		<ul>
+      <li><a href="index.html">HOMEPAGE</a></li>
+
+			<li><a href="azienda.html">L’AZIENDA AGRICOLA</a></li>
+			<li><a href="progetto.html">PROGETTO CSA</a></li>
+			<li><a href="aderire.html">PERCHE’ADERIRE</a></li>
+      <li><a href="partecipare.html">COME PARTECIPARE</a></li>
+      <li><a href="galleria.html">GALLERIA</a></li>
+      <li><a href="contatti.html">CONTATTI</a></li>
+      
+
+      
+		</ul>
+	</nav>
+
+	<main2>
+		<div class="gallery">
+			<img src="assets/Gallery/(1).jpg" alt="Image 1">
+			<img src="assets/Gallery/(2).jpg" alt="Image 2">
+			<img src="assets/Gallery/(3).jpg" alt="Image 3">
+			<img src="assets/Gallery/(4).jpg" alt="Image 4">
+			<img src="assets/Gallery/(5).jpg" alt="Image 5">
+			<img src="assets/Gallery/(6).jpg" alt="Image 6">
+			<img src="assets/Gallery/(7).jpg" alt="Image 7">
+			<img src="assets/Gallery/(8).jpg" alt="Image 8">
+			<img src="assets/Gallery/(9).jpg" alt="Image 9">
+			<img src="assets/Gallery/(10).jpg" alt="Image 10">
+			<img src="assets/Gallery/(11).jpg" alt="Image 11">
+			<img src="assets/Gallery/(12).jpg" alt="Image 12">
+			<img src="assets/Gallery/(13).jpg" alt="Image 13">
+
+		  </div>
+		  
+	</main2>
+  <script>
+		const menuToggle = document.querySelector('.menu-toggle');
+		const nav = document.querySelector('nav');
+		
+		menuToggle.addEventListener('click', () => {
+			nav.classList.toggle('active');
+		});
+		var currentIndex = 0;
+var images = document.querySelectorAll('.gallery img');
+var prevButton = document.querySelector('.prev-button');
+var nextButton = document.querySelector('.next-button');
+
+prevButton.addEventListener('click', function() {
+  images[currentIndex].classList.remove('active');
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  }
+  images[currentIndex].classList.add('active');
+});
+
+nextButton.addEventListener('click', function() {
+  images[currentIndex].classList.remove('active');
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  images[currentIndex].classList.add('active');
+});
+	</script>
+</body>
+</html>

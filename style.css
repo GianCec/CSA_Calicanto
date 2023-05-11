@@ -1,0 +1,171 @@
+body {
+  margin-top: 10vh;
+  margin-left: 3vw;
+
+	background-image: url(assets/sfondoi.jpg);
+	background-size: cover ;
+	background-position-x: 90%;
+  background-position-y: 5%;
+
+  background-repeat: no-repeat; /* Do not repeat the image */
+
+}
+
+header {
+
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+ position: absolute;
+ top: 20px;
+
+	width: 30vh;
+}
+
+.logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.menu-toggle {
+  position: fixed;
+	top: 40px;
+	right: 50px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Stile per le tre linee del menu */
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+/* Stile per il menu quando è aperto */
+nav {
+  position: fixed;
+  top: 90px;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Stile per il menu quando è aperto */
+nav.active {
+  display: block;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+}
+
+.gallery img {
+  width: 25vw;
+  background-color: black;
+  object-fit:scale-down;
+  margin: 10px;
+}
+
+main {
+  top:10vh;
+	left: 0;
+	right: 10vw;
+	max-width: 40vw;
+
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+main2 {
+  top:10vh;
+	left: 0;
+	right: 10vw;
+	max-width: 80vw;
+
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+p {
+  font-size: 1.4em;
+
+
+}
+
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+
+  }
+  body {
+    margin-top: 10vh;
+    margin-left: 3vw;  
+    background-image: url(assets/sfondoMob.jpg);
+    background-size: auto ;
+   background-position: center;
+  
+    background-repeat: no-repeat; /* Do not repeat the image */
+  
+  }
+  main {
+    left: 0;
+    right: 0;
+    max-width: 55vw;
+  
+    color: rgb(255, 255, 255);
+    
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  p {
+    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, 0.3);
+
+  }
+  body {
+    margin-top: 10vh;
+    margin-left: 3vw;  
+    background-image: url(assets/sfondoMob.jpg);
+    background-size: auto ;
+   
+  
+    background-repeat: no-repeat; /* Do not repeat the image */
+  
+  }
+}
